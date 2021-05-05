@@ -1,6 +1,26 @@
 .modal {
-	display: none;
+	display: block;
 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+	transition: 0.3s ease;
+}
+
+.modal.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 10000;
+}
+
+.modal__wrapper {
+	display: block;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -10,7 +30,6 @@
 	background-color: #F7F7FF;
 	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 	border-radius: 6px;
-	z-index: 10000;
 }
 
 .modal form {
@@ -41,21 +60,21 @@
 	border: 1px solid #888888;
 	box-sizing: border-box;
 	border-radius: 4px;
-	font-family: Montserrat;
+	font-family: Montserrat, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 50px;
 	color: #444444;
 	padding: 0 20px;
 	background-color: #fff;
-	margin-right: 30px;
+	margin-right: 50px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 }
 
 .name__input::placeholder {
-	font-family: Montserrat;
+	font-family: Montserrat, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 50px;
@@ -75,7 +94,7 @@
 	// margin-left: 30px;
 	cursor: pointer;
 	span {
-		font-family: Montserrat;
+		font-family: Montserrat, sans-serif;
 		font-weight: normal;
 		font-size: 16px;
 	}
@@ -132,7 +151,7 @@
 	height: 50px;
 	justify-content: flex-end;
 	align-items: center;
-	font-family: Montserrat;
+	font-family: Montserrat, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 21px;
@@ -165,7 +184,7 @@
 	border: 1px solid #888888;
 	box-sizing: border-box;
 	border-radius: 4px;
-	font-family: "Montserat";
+	font-family: Montserrat, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 130%;
@@ -174,7 +193,7 @@
 }
 
 .modal__area::placeholder {
-	font-family: Montserrat;
+	font-family: Montserrat, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 130%;
@@ -186,7 +205,7 @@
 	height: 50px;
 	background: #5B67C8;
 	border-radius: 4px;
-	font-family: Montserrat;
+	font-family: Montserrat, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 	line-height: 21px;
@@ -224,6 +243,14 @@
 	line-height: 130%;
 	text-align: center;
 	color: #222222;
+}
+
+.modal__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 1000;
 }
 
 @media (max-width: 880px) {
