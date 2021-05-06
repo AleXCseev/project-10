@@ -254,7 +254,7 @@
 }
 
 @media (max-width: 880px) {
-	.modal {
+	.modal__wrapper {
 		width: 668px;
 		height: 398px;
 	}
@@ -276,7 +276,7 @@
 }
 
 @media (max-width: 700px) {
-	.modal {
+	.modal__wrapper {
 		width: 290px;
 		height: 508px;
 		padding: 20px;
@@ -284,14 +284,17 @@
 	.modal form {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: flex-start;
+	}
+	.send {
+		margin-top: 20px;
 	}
 	.modal__area {
 		margin-bottom: 75px;
 	}
 	.modal__autor {
-		height: 170px;
+		height: auto;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -315,6 +318,8 @@
 		width: 100%;
 		height: 50px;
 		bottom: auto;
+		margin-bottom: 40px;
+		margin-top: 40px;
 		justify-content: flex-start;
 	}
 }

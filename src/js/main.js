@@ -1,8 +1,4 @@
 $(function () {
-	AOS.init({
-		disable : "phone"
-	});
-
 	$.raty.path = 'img/raty';
 
 	$('.modal__raiting').raty({
@@ -22,11 +18,19 @@ $(function () {
 	// 	'disableScrolling': true,
 	// })
 
+	if($(window).width() <= 540) {
+		$(".galary").slick({
+			dots: true,
+			appendDots: $(".galary__controls"),
+			prevArrow: $(".galary__prev"),
+			nextArrow: $(".galary__next")
+		})
+	}
 
 	$("body").on('click', '[href*="#"]', function (e) {
 		var fixedOffset = 0;
 		if ($(document).width() <= 600) {
-			fixedOffset = 700;
+			fixedOffset = -200;
 		}
 		$('html, body')
 			.stop()
