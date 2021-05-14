@@ -161,11 +161,11 @@
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 30px;
 	line-height: 128%;
 	text-transform: uppercase;
 	color: #28B0FF;
-	margin-bottom: 34px;
+	margin-bottom: 20px;
 }
 
 .galary__advantage {
@@ -205,17 +205,17 @@
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 130%;
 	color: #14E7E9;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .galary__advantage-text {
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 130%;
 	color: #FFFFFF;
 }
@@ -380,7 +380,7 @@
 }
 
 .card__img {
-	width: 83px;
+	width: 100%;
 	height: auto;
 	pointer-events: auto;
 }
@@ -409,10 +409,11 @@
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 28px;
 	line-height: 128%;
 	text-transform: uppercase;
 	color: #28B0FF;
+	width: 180px;
 }
 
 .raiting {
@@ -430,15 +431,15 @@
 	}
 }
 
-.card__price {
-	margin-bottom: 16px;
+.card__price .price {
+	margin-bottom: 10px;
 }
 
 .card__info {
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 150%;
 	color: #FFFFFF;
 }
@@ -448,7 +449,7 @@
 	height: auto;
 	display: flex;
 	flex-direction: column;
-	margin-top: 23px;
+	margin-top: 10px;
 }
 
 .card__input-wrapper {
@@ -468,10 +469,21 @@
 	line-height: 100%;
 	color: #FFFFFF;
 	outline: none;
+	transition: 0.3s ease;
 }
 
 .card__input::placeholder {
 	color: #FFFFFF;
+	opacity: 1;
+}
+
+.card__input:focus {
+	border-color: #00FFFF;
+}
+
+.card__input:focus::placeholder {
+	color: #00FFFF;
+	opacity: 1;
 }
 
 .card__select {
@@ -491,10 +503,16 @@
 	background-repeat: no-repeat;
 	background-position: right 20px center;
 	margin-bottom: 10px;
+	transition: 0.3s ease;
 
 	option {
 		background-color: #202F46;
 	}
+}
+
+.card__select:focus {
+	border-color: #00FFFF;
+	color: #00FFFF;
 }
 
 .card__right .header__order-btn {
@@ -553,6 +571,7 @@
 }
 
 .sprey__logo {
+	display: none;
 	margin-right: 20px;
 }
 
@@ -560,7 +579,7 @@
 	font-family: Montserrat, sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 36px;
+	font-size: 22px;
 	line-height: 128%;
 	text-transform: uppercase;
 	color: #28B0FF;

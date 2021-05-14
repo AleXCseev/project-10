@@ -1,6 +1,6 @@
 
 /////////////////////////////////////////////////////////////////////
-@media (max-width: 1600px) {
+@media (max-width: 1680px) {
 	.info__name {
 		right: -100px;
 	}
@@ -69,6 +69,9 @@
 	}
 	.header__wrapper {
 		margin-bottom: 120px;
+	}
+	.header__title {
+		font-size: 36px;
 	}
 	.header__boot {
 		width: 500px;
@@ -183,7 +186,7 @@
 	}
 	.footer__title {
 		width: 560px;
-		font-size: 45px;
+		font-size: 34px;
 	}
 	.footer__man {
 		width: 380px;
@@ -329,11 +332,11 @@
 		padding: 50px 0;
 	}
 	.galary__info {
-		width: 400px;
+		width: 380px;
 		height: auto;
 	}
 	.galary__title {
-		font-size: 32px;
+		font-size: 30px;
 	}
 	.galary__advantage-title {
 		font-size: 20px;
@@ -401,6 +404,7 @@
 		margin-bottom: 20px;
 	}
 	.sprey__logo {
+		display: inline-block;
 		margin-right: 0;
 		margin-bottom: 455px;
 	}
@@ -421,7 +425,7 @@
 	.sprey__card .sale {
 		top: 280px;
 		left: 50%;
-		margin-left: -125px;
+		margin-left: -163px;
 		transform: translateX(-50%) rotate(-10deg);
 	}
 	.move__mark {
@@ -452,7 +456,7 @@
 	}
 	.footer__title {
 		width: 470px;
-		font-size: 40px;
+		font-size: 30px;
 		margin-bottom: 100px;
 	}
 	.footer__wrapper .header__label {
@@ -545,8 +549,12 @@
 		top: 190px;
 		left: -165px;
 	}
+	.info__left {
+		top: 410px;
+	}
 	.info__text {
-		margin-bottom: 1270px;
+		margin-bottom: 1280px;
+		font-size: 20px;
 	}
 	.info__left {
 		left: 50%;
@@ -695,7 +703,7 @@
 	}
 	.footer__title {
 		max-width: 470px;
-		font-size: 40px;
+		font-size: 24px;
 		margin-bottom: 400px;
 	}
 	.footer__bg-logo {
@@ -744,6 +752,7 @@
 	.header__title {
 		padding: 0 50px;
 		margin-bottom: 370px;
+		font-size: 32px;
 	}
 	.advantage__wrapper {
 		justify-content: center;
@@ -780,10 +789,11 @@
 	.info__logo {
 		align-self: center;
 		margin-bottom: 35px;
+		margin-top: 50px;
 	}
 	.info__section-wrapper {
 		position: relative;
-		padding: 50px 0 0 0;
+		padding: 0;
 	}
 	.info__title {
 		margin-bottom: 30px;
@@ -809,7 +819,7 @@
 
 /////////////////////////////////////////////////////////////////////
 @media (max-width: 660px) {
-	
+
 }
 
 
@@ -841,16 +851,16 @@
 	}
 	.header__boot {
 		width: 410px;
-		top: 120px;
+		top: 140px;
 		left: -25px;
 	}
 	.header__man {
-		top: 85px;
+		top: 110px;
 		right: -20px;
 		width: 200px;
 	}
 	.sale {
-		top: 180px;
+		top: 200px;
 		left: 220px;
 	}
 	.cross__wrapper-blue {
@@ -865,6 +875,9 @@
 		width: 220px;
 		top: 730px;
 		right: -55px;
+	}
+	.info__text {
+		font-size: 17px;
 	}
 	.info__right .sale {
 		left: 20px;
@@ -1040,19 +1053,24 @@
 	.review__block {
 		flex-direction: column;
 		justify-content: flex-start;
-		padding: 39px 20px 32px 20px;
+		padding: 39px 16px 32px 20px;
 	}
 	.review__quote {
 		right: 20px;
 		bottom: 20px;
 	}
 	.review__text {
-		font-size: 18px;
-		line-height: 27px;
+		font-size: 17px;
+		line-height: 150%;
 	}
 	.review__title-slide {
 		display: block;
 		font-size: 30px;
+	}
+	.review__name {
+		position: absolute;
+		bottom: 32px;
+		left: 20px;
 	}
 	.footer__info .container {
 		span {
@@ -1063,7 +1081,7 @@
 	.footer__title {
 		max-width: 100%;
 		text-align: center;
-		font-size: 30px;
+		font-size: 22px;
 		margin-bottom: 400px;
 	}
 	.footer__man {
@@ -1091,7 +1109,8 @@
 		width: calc(100% - 30px);
 	}
 	.header__dots-blue {
-		left: -100px;
+		top: 450px;
+		left: -120px;
 	}
 	.header__dots-yellow {
 		width: 220px;
@@ -1100,26 +1119,36 @@
 	}
 	.header__boot {
 		width: 390px;
-		top: 120px;
+		top: 140px;
 		left: -10px;
 	}
 	.header__man {
-		top: 85px;
+		top: 110px;
 		right: -20px;
 		width: 190px;
 	}
+	.header__title {
+		font-size: 24px;
+	}
 	.sale {
-		top: 165px;
+		top: 185px;
 		left: 210px;
 	}
 	.advantages {
 		width: 100%;
 	}
+	.info__title {
+		font-size: 30px;
+	}
+	.info__text {
+		margin-bottom: 1270px;
+		font-size: 14px;
+	}
 	.line__blue {
 		animation: none;
 	}
 	.info__left {
-		top: 440px;
+		top: 380px;
 	}
 	.info__logo-bg {
 		right: -150px;
@@ -1134,15 +1163,15 @@
 		width: 100%;
 	}
 	.galary__title {
-		font-size: 30px;
+		font-size: 26px;
 		text-align: center;
 	}
-	.galary__advantage-title {
-		font-size: 24px;
-	}
-	.galary__advantage-text {
-		font-size: 18px;
-	}
+	//.galary__advantage-title {
+	//	font-size: 20px;
+	//}
+	//.galary__advantage-text {
+	//	font-size: 18px;
+	//}
 	.galary__advantage {
 		margin-bottom: 35px;
 	}
@@ -1165,8 +1194,16 @@
 		max-width: 300px;
 		margin: auto;
 	}
+	.card__title {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
 	.sprey__card {
 		margin-top: 50px;
+	}
+	.sprey__card .sale {
+		margin-left: -166px;
 	}
 	.delivery {
 		margin-bottom: 35px;
@@ -1176,13 +1213,16 @@
 		top: 320px;
 		right: 0;
 	}
+	//.footer__title {
+	//	font-size: 28px;
+	//}
 	.footer__boot {
 		right: 60px;
 		top: 215px;
 		width: 344px;
 	}
 	.footer__wrapper .sale {
-		top: 210px;
+		top: 220px;
 		right: 0;
 	}
 	.footer__wrapper .header__label {
@@ -1194,6 +1234,9 @@
 
 /////////////////////////////////////////////////////////////////////
 @media (max-width: 390px) {
+	.header__title {
+		font-size: 24px;
+	}
 	.card__foto {
 		width: 92px;
 		height: 63px;
@@ -1218,7 +1261,6 @@
 @media (max-width: 375px) {
 	.header__title {
 		padding: 0;
-		font-size: 26px;
 		margin-bottom: 370px;
 		text-align: center;
 	}
@@ -1237,11 +1279,8 @@
 		width: 290px;
 		margin: 30px 0 20px 0;
 	}
-	.advantage__title {
-		font-size: 20px;
-	}
 	.advantage__text {
-		font-size: 17px;
+		font-size: 13px;
 	}
 	.advantage__man {
 		width: 360px;
@@ -1257,7 +1296,7 @@
 		margin-bottom: 20px;
 	}
 	.info__left {
-		top: 420px;
+		top: 360px;
 	}
 	.info__left img {
 		width: 375px;
@@ -1274,9 +1313,9 @@
 		margin-bottom: 280px;
 	}
 	.card__foto {
-		width: 80px;
-		height: 58px;
-		margin-bottom: 10px;
+		width: 32%;
+		height: 60px;
+		margin-bottom: 5px;
 	}
 	.card__boot {
 		width: 300px;
@@ -1319,7 +1358,6 @@
 	.footer__title {
 		max-width: 100%;
 		text-align: center;
-		font-size: 26px;
 		margin-bottom: 400px;
 	}
 	.footer__logo {
@@ -1336,7 +1374,7 @@
 	}
 	.sprey__card .sale {
 		top: 275px;
-		margin-left: -100px;
+		margin-left: -145px;
 	}
 	.sprey__logo {
 		margin-right: 0;
@@ -1373,11 +1411,14 @@
 	}
 	.header__boot {
 		width: 350px;
-		top: 120px;
+		top: 170px;
 		left: -40px;
 	}
+	.header__man {
+		top: 130px;
+	}
 	.sale {
-		top: 150px;
+		top: 190px;
 		left: 150px;
 	}
 	.header__dots-blue {
@@ -1387,9 +1428,9 @@
 	.advantage__wrapper {
 		padding-bottom: 500px;
 	}
-	.advantage__text {
-		font-size: 16px;
-	}
+	//.advantage__text {
+	//	font-size: 16px;
+	//}
 	.advantage__man {
 		width: 320px;
 		bottom: 50px;
@@ -1399,6 +1440,9 @@
 	}
 	.info__right {
 		width: 100%;
+	}
+	.info__title {
+		font-size: 28px;
 	}
 	.info__left {
 		top: 460px;
@@ -1418,6 +1462,7 @@
 	}
 	.info__text {
 		margin-bottom: 1100px;
+		font-size: 16px;
 	}
 	.galary {
 		width: 100%;
@@ -1427,19 +1472,19 @@
 		height: 240px;
 	}
 	.galary__title {
-		font-size: 28px;
+		font-size: 24px;
 		text-align: center;
 		margin-bottom: 26px;
 	}
 	.galary__advantage-title {
-		font-size: 20px;
+		font-size: 18px;
 	}
 	.galary__advantage-text {
 		font-size: 16px;
 	}
 	.card__foto {
 		width: 75px;
-		height: 55px;
+		height: 50px;
 		margin-bottom: 10px;
 	}
 	.card__boot {
@@ -1460,7 +1505,7 @@
 	}
 	.sprey__card .sale {
 		top: 255px;
-		margin-left: -90px;
+		margin-left: -138px;
 	}
 	.sprey__logo {
 		margin-right: 0;
@@ -1507,7 +1552,6 @@
 	.footer__title {
 		max-width: 100%;
 		text-align: center;
-		font-size: 26px;
 		margin-bottom: 380px;
 	}
 	.footer__wrapper .header__label {

@@ -34,6 +34,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
 img {
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -329,7 +338,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 46px;
   line-height: 125%;
   text-align: left;
   text-transform: uppercase;
@@ -554,7 +563,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 130%;
   color: #14E7E9;
   margin-bottom: 15px;
@@ -564,7 +573,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 130%;
   color: #FFFFFF;
 }
@@ -761,11 +770,11 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 128%;
   text-transform: uppercase;
   color: #28B0FF;
-  margin-bottom: 34px;
+  margin-bottom: 20px;
 }
 
 .galary__advantage {
@@ -808,17 +817,17 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 130%;
   color: #14E7E9;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .galary__advantage-text {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130%;
   color: #FFFFFF;
 }
@@ -999,7 +1008,7 @@ body {
 }
 
 .card__img {
-  width: 83px;
+  width: 100%;
   height: auto;
   pointer-events: auto;
 }
@@ -1031,10 +1040,11 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 128%;
   text-transform: uppercase;
   color: #28B0FF;
+  width: 180px;
 }
 
 .raiting span {
@@ -1051,15 +1061,15 @@ body {
   width: 18px;
 }
 
-.card__price {
-  margin-bottom: 16px;
+.card__price .price {
+  margin-bottom: 10px;
 }
 
 .card__info {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 150%;
   color: #FFFFFF;
 }
@@ -1071,7 +1081,7 @@ body {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  margin-top: 23px;
+  margin-top: 10px;
 }
 
 .card__input-wrapper {
@@ -1091,18 +1101,41 @@ body {
   line-height: 100%;
   color: #FFFFFF;
   outline: none;
+  transition: 0.3s ease;
 }
 
 .card__input::-webkit-input-placeholder {
   color: #FFFFFF;
+  opacity: 1;
 }
 
 .card__input:-ms-input-placeholder {
   color: #FFFFFF;
+  opacity: 1;
 }
 
 .card__input::placeholder {
   color: #FFFFFF;
+  opacity: 1;
+}
+
+.card__input:focus {
+  border-color: #00FFFF;
+}
+
+.card__input:focus::-webkit-input-placeholder {
+  color: #00FFFF;
+  opacity: 1;
+}
+
+.card__input:focus:-ms-input-placeholder {
+  color: #00FFFF;
+  opacity: 1;
+}
+
+.card__input:focus::placeholder {
+  color: #00FFFF;
+  opacity: 1;
 }
 
 .card__select {
@@ -1122,10 +1155,16 @@ body {
   background-repeat: no-repeat;
   background-position: right 20px center;
   margin-bottom: 10px;
+  transition: 0.3s ease;
 }
 
 .card__select option {
   background-color: #202F46;
+}
+
+.card__select:focus {
+  border-color: #00FFFF;
+  color: #00FFFF;
 }
 
 .card__right .header__order-btn {
@@ -1194,6 +1233,7 @@ body {
 }
 
 .sprey__logo {
+  display: none;
   margin-right: 20px;
 }
 
@@ -1201,7 +1241,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 22px;
   line-height: 128%;
   text-transform: uppercase;
   color: #28B0FF;
@@ -1597,7 +1637,7 @@ body {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 38px;
   line-height: 125%;
   text-transform: uppercase;
   color: #28B0FF;
@@ -1616,10 +1656,39 @@ body {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   left: -286px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin-top: -5px;
+  top: 70px;
+  -webkit-animation: tringle 5s infinite;
+  animation: tringle 5s infinite;
+}
+
+@-webkit-keyframes tringle {
+  0% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+}
+
+@keyframes tringle {
+  0% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
 }
 
 .footer__info {
@@ -1652,70 +1721,6 @@ body {
 
 .confidantion {
   cursor: pointer;
-}
-
-.privacy-policy-popup {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  visibility: hidden;
-  z-index: -1;
-  transition: 0.3s ease;
-}
-
-.privacy-policy-popup.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 10000;
-}
-
-.privacy-policy__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 750px;
-  height: auto;
-  padding: 50px;
-  background-color: #F7F7FF;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-}
-
-.privacy-policy__headline {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 100%;
-  text-align: center;
-  color: #222;
-  margin-bottom: 20px;
-}
-
-.privacy-policy__text {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
-  text-align: left;
-  color: #222;
-  margin-bottom: 10px;
-}
-
-.privacy__close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 1000;
 }
 
 .modal {
@@ -2028,6 +2033,71 @@ body {
   z-index: 1000;
 }
 
+.privacy-policy-popup {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+
+.privacy-policy-popup.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10000;
+}
+
+.privacy-policy__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 750px;
+  height: auto;
+  padding: 50px;
+  background-color: #F7F7FF;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.privacy-policy__headline {
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 100%;
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.privacy-policy__text {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  text-align: left;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.privacy__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 @media (max-width: 880px) {
   .modal__wrapper {
     width: 668px;
@@ -2048,6 +2118,9 @@ body {
     left: 50px;
     width: 200px;
     bottom: 115px;
+  }
+  .privacy-policy__wrapper {
+    width: calc(100% - 60px);
   }
 }
 
@@ -2109,9 +2182,22 @@ body {
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
   }
+  .privacy-policy__wrapper {
+    width: calc(100% - 30px);
+    height: 500px;
+    padding: 50px 30px;
+    overflow: auto;
+  }
+  .privacy-policy__headline {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .privacy-policy__text {
+    font-size: 14px;
+  }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1680px) {
   .info__name {
     right: -100px;
   }
@@ -2178,6 +2264,9 @@ body {
   }
   .header__wrapper {
     margin-bottom: 120px;
+  }
+  .header__title {
+    font-size: 36px;
   }
   .header__boot {
     width: 500px;
@@ -2294,7 +2383,7 @@ body {
   }
   .footer__title {
     width: 560px;
-    font-size: 45px;
+    font-size: 34px;
   }
   .footer__man {
     width: 380px;
@@ -2441,11 +2530,11 @@ body {
     padding: 50px 0;
   }
   .galary__info {
-    width: 400px;
+    width: 380px;
     height: auto;
   }
   .galary__title {
-    font-size: 32px;
+    font-size: 30px;
   }
   .galary__advantage-title {
     font-size: 20px;
@@ -2519,6 +2608,7 @@ body {
     margin-bottom: 20px;
   }
   .sprey__logo {
+    display: inline-block;
     margin-right: 0;
     margin-bottom: 455px;
   }
@@ -2540,7 +2630,7 @@ body {
   .sprey__card .sale {
     top: 280px;
     left: 50%;
-    margin-left: -125px;
+    margin-left: -163px;
     -webkit-transform: translateX(-50%) rotate(-10deg);
     transform: translateX(-50%) rotate(-10deg);
   }
@@ -2572,7 +2662,7 @@ body {
   }
   .footer__title {
     width: 470px;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 100px;
   }
   .footer__wrapper .header__label {
@@ -2667,8 +2757,12 @@ body {
     top: 190px;
     left: -165px;
   }
+  .info__left {
+    top: 410px;
+  }
   .info__text {
-    margin-bottom: 1270px;
+    margin-bottom: 1280px;
+    font-size: 20px;
   }
   .info__left {
     left: 50%;
@@ -2832,7 +2926,7 @@ body {
   }
   .footer__title {
     max-width: 470px;
-    font-size: 40px;
+    font-size: 24px;
     margin-bottom: 400px;
   }
   .footer__bg-logo {
@@ -2873,6 +2967,7 @@ body {
   .header__title {
     padding: 0 50px;
     margin-bottom: 370px;
+    font-size: 32px;
   }
   .advantage__wrapper {
     -webkit-justify-content: center;
@@ -2915,10 +3010,11 @@ body {
     -webkit-align-self: center;
     align-self: center;
     margin-bottom: 35px;
+    margin-top: 50px;
   }
   .info__section-wrapper {
     position: relative;
-    padding: 50px 0 0 0;
+    padding: 0;
   }
   .info__title {
     margin-bottom: 30px;
@@ -2970,16 +3066,16 @@ body {
   }
   .header__boot {
     width: 410px;
-    top: 120px;
+    top: 140px;
     left: -25px;
   }
   .header__man {
-    top: 85px;
+    top: 110px;
     right: -20px;
     width: 200px;
   }
   .sale {
-    top: 180px;
+    top: 200px;
     left: 220px;
   }
   .cross__wrapper-blue {
@@ -2994,6 +3090,9 @@ body {
     width: 220px;
     top: 730px;
     right: -55px;
+  }
+  .info__text {
+    font-size: 17px;
   }
   .info__right .sale {
     left: 20px;
@@ -3185,19 +3284,24 @@ body {
     flex-direction: column;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
-    padding: 39px 20px 32px 20px;
+    padding: 39px 16px 32px 20px;
   }
   .review__quote {
     right: 20px;
     bottom: 20px;
   }
   .review__text {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 17px;
+    line-height: 150%;
   }
   .review__title-slide {
     display: block;
     font-size: 30px;
+  }
+  .review__name {
+    position: absolute;
+    bottom: 32px;
+    left: 20px;
   }
   .footer__info .container span {
     font-size: 12px;
@@ -3206,7 +3310,7 @@ body {
   .footer__title {
     max-width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
     margin-bottom: 400px;
   }
   .footer__man {
@@ -3233,7 +3337,8 @@ body {
     width: calc(100% - 30px);
   }
   .header__dots-blue {
-    left: -100px;
+    top: 450px;
+    left: -120px;
   }
   .header__dots-yellow {
     width: 220px;
@@ -3242,27 +3347,37 @@ body {
   }
   .header__boot {
     width: 390px;
-    top: 120px;
+    top: 140px;
     left: -10px;
   }
   .header__man {
-    top: 85px;
+    top: 110px;
     right: -20px;
     width: 190px;
   }
+  .header__title {
+    font-size: 24px;
+  }
   .sale {
-    top: 165px;
+    top: 185px;
     left: 210px;
   }
   .advantages {
     width: 100%;
+  }
+  .info__title {
+    font-size: 30px;
+  }
+  .info__text {
+    margin-bottom: 1270px;
+    font-size: 14px;
   }
   .line__blue {
     -webkit-animation: none;
     animation: none;
   }
   .info__left {
-    top: 440px;
+    top: 380px;
   }
   .info__logo-bg {
     right: -150px;
@@ -3277,14 +3392,8 @@ body {
     width: 100%;
   }
   .galary__title {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
-  }
-  .galary__advantage-title {
-    font-size: 24px;
-  }
-  .galary__advantage-text {
-    font-size: 18px;
   }
   .galary__advantage {
     margin-bottom: 35px;
@@ -3308,8 +3417,16 @@ body {
     max-width: 300px;
     margin: auto;
   }
+  .card__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
   .sprey__card {
     margin-top: 50px;
+  }
+  .sprey__card .sale {
+    margin-left: -166px;
   }
   .delivery {
     margin-bottom: 35px;
@@ -3325,7 +3442,7 @@ body {
     width: 344px;
   }
   .footer__wrapper .sale {
-    top: 210px;
+    top: 220px;
     right: 0;
   }
   .footer__wrapper .header__label {
@@ -3335,6 +3452,9 @@ body {
 }
 
 @media (max-width: 390px) {
+  .header__title {
+    font-size: 24px;
+  }
   .card__foto {
     width: 92px;
     height: 63px;
@@ -3358,7 +3478,6 @@ body {
 @media (max-width: 375px) {
   .header__title {
     padding: 0;
-    font-size: 26px;
     margin-bottom: 370px;
     text-align: center;
   }
@@ -3377,11 +3496,8 @@ body {
     width: 290px;
     margin: 30px 0 20px 0;
   }
-  .advantage__title {
-    font-size: 20px;
-  }
   .advantage__text {
-    font-size: 17px;
+    font-size: 13px;
   }
   .advantage__man {
     width: 360px;
@@ -3397,7 +3513,7 @@ body {
     margin-bottom: 20px;
   }
   .info__left {
-    top: 420px;
+    top: 360px;
   }
   .info__left img {
     width: 375px;
@@ -3414,9 +3530,9 @@ body {
     margin-bottom: 280px;
   }
   .card__foto {
-    width: 80px;
-    height: 58px;
-    margin-bottom: 10px;
+    width: 32%;
+    height: 60px;
+    margin-bottom: 5px;
   }
   .card__boot {
     width: 300px;
@@ -3459,7 +3575,6 @@ body {
   .footer__title {
     max-width: 100%;
     text-align: center;
-    font-size: 26px;
     margin-bottom: 400px;
   }
   .footer__logo {
@@ -3475,7 +3590,7 @@ body {
   }
   .sprey__card .sale {
     top: 275px;
-    margin-left: -100px;
+    margin-left: -145px;
   }
   .sprey__logo {
     margin-right: 0;
@@ -3511,11 +3626,14 @@ body {
   }
   .header__boot {
     width: 350px;
-    top: 120px;
+    top: 170px;
     left: -40px;
   }
+  .header__man {
+    top: 130px;
+  }
   .sale {
-    top: 150px;
+    top: 190px;
     left: 150px;
   }
   .header__dots-blue {
@@ -3524,9 +3642,6 @@ body {
   }
   .advantage__wrapper {
     padding-bottom: 500px;
-  }
-  .advantage__text {
-    font-size: 16px;
   }
   .advantage__man {
     width: 320px;
@@ -3537,6 +3652,9 @@ body {
   }
   .info__right {
     width: 100%;
+  }
+  .info__title {
+    font-size: 28px;
   }
   .info__left {
     top: 460px;
@@ -3556,6 +3674,7 @@ body {
   }
   .info__text {
     margin-bottom: 1100px;
+    font-size: 16px;
   }
   .galary {
     width: 100%;
@@ -3565,19 +3684,19 @@ body {
     height: 240px;
   }
   .galary__title {
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 26px;
   }
   .galary__advantage-title {
-    font-size: 20px;
+    font-size: 18px;
   }
   .galary__advantage-text {
     font-size: 16px;
   }
   .card__foto {
     width: 75px;
-    height: 55px;
+    height: 50px;
     margin-bottom: 10px;
   }
   .card__boot {
@@ -3596,7 +3715,7 @@ body {
   }
   .sprey__card .sale {
     top: 255px;
-    margin-left: -90px;
+    margin-left: -138px;
   }
   .sprey__logo {
     margin-right: 0;
@@ -3643,7 +3762,6 @@ body {
   .footer__title {
     max-width: 100%;
     text-align: center;
-    font-size: 26px;
     margin-bottom: 380px;
   }
   .footer__wrapper .header__label {

@@ -1,4 +1,9 @@
 $(function () {
+	AOS.init({
+		disable : "phone",
+		// offset : -100,
+	});
+
 	$.raty.path = 'img/raty';
 
 	$('.modal__raiting').raty({
@@ -7,10 +12,14 @@ $(function () {
 		number: 5,
 	});
 
-	$('a[data-rel^=lightcase]').lightcase({
-		swipe: true,
-		showCaption: false
+	$('[data-fancybox]').fancybox({
+		loop: true,
 	});
+
+	// $('a[data-rel^=lightcase]').lightcase({
+	// 	swipe: true,
+	// 	showCaption: false,
+	// });
 
 	// lightbox.option({
 	// 	'alwaysShowNavOnTouchDevices': true,
@@ -23,7 +32,14 @@ $(function () {
 			dots: true,
 			appendDots: $(".galary__controls"),
 			prevArrow: $(".galary__prev"),
-			nextArrow: $(".galary__next")
+			nextArrow: $(".galary__next"),
+
+		});
+		$("[data-fancybox]").fancybox({
+			loop: true,
+			afterClose: function(instance, current) {
+				$(".galary").slick("slickGoTo", current.index-1, true);
+			},
 		})
 	}
 
@@ -167,24 +183,6 @@ $(function () {
 			},
 
 		});
-		// if($(window).width() <= 800) {
-		// 	$(selector).swipe({
-		// 		swipeStatus: function (event, phase, direction) {
-		// 			if (phase == "end") {
-		// 				if (direction == 'left') {
-		// 					if (acarousel.isAnim()) return false;
-		// 					acarousel.move(-1)
-		// 				}
-		// 				if (direction == 'right') {
-		// 					if (acarousel.isAnim()) return false;
-		// 					acarousel.move(1);
-		// 				}
-		// 			}
-		// 		},
-		// 		triggerOnTouchEnd: false,
-		// 		threshold: 200,
-		// 	});
-		// }
 
 		function changeActive(move) {
 			var index = acarousel.getPos(move).index;
@@ -214,12 +212,36 @@ $(function () {
 			return false;
 		});
 
+		$(selector).swipeleft(function(e) {
+			if (acarousel.isAnim()) return false;
+			var move = acarousel.move(-1);
+			changeActive(move);
+			return false;
+		})
+
+		$(selector).swiperight(function(e) {
+			console.log("swipe")
+			if (acarousel.isAnim()) return false;
+			var move = acarousel.move(1);
+			changeActive(move);
+			return false;
+		})
+
+		// setInterval(function () {
+		// 	if (acarousel.isAnim()) return false;
+		// 	var move = acarousel.move(-1);
+		// 	changeActive(move);
+		// 	return false;
+		// }, 5000)
+
+
 		$(window).resize(function () {
 			acarousel.init();
 		});
 	}
 
 	carousel(".review__wrapper", ".reviews");
+
 })
 
 
